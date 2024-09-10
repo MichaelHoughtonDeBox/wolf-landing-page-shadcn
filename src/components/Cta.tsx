@@ -114,7 +114,7 @@ export const Cta = () => {
             <div className="space-y-4 lg:col-start-2">
               <Button 
                 className="w-full md:mr-4 md:w-auto"
-                onClick={() => window.open('https://wolfpack-seven.vercel.app/', '_blank')}
+                onClick={() => window.open('https://map.communitywolf.com/', '_blank')}
               >
                 View Live Map 🗺️
               </Button>

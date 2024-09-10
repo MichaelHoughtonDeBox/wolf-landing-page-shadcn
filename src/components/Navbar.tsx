@@ -42,7 +42,7 @@ const routeList: RouteProps[] = [
   //   label: "FAQ ❓",
   // },
   {
-    href: "https://wolfpack-seven.vercel.app/", // Replace with actual URL
+    href: "https://map.communitywolf.com/", // Replace with actual URL
     label: "Live Map 🗺️",
   },
 ];

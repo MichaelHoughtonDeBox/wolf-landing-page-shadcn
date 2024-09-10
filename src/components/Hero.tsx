@@ -119,7 +119,7 @@ export const Hero = () => {
               <Button 
               variant="default" 
               className=""
-              onClick={() => window.open('https://wolfpack-seven.vercel.app/', '_blank')}
+              onClick={() => window.open('https://map.communitywolf.com/', '_blank')}
               >
                 See Live Map 🗺️
               </Button>
