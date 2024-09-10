@@ -9,21 +9,21 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "WhatsApp Integration",
+    title: "WhatsApp Is Your Friend",
     description:
-      "Send Wolf a WhatsApp message or voice note with incident details. Our system stores and analyzes this data, creating a virtual police statement and identifying patterns for future prevention.",
+      "Send Wolf a WhatsApp message or voice note with any incident details you remember. Wolf stores and analyses your reports, creating a virtual police statement that it can reference in the future when trying to identify patterns.",
     icon: "📱",
   },
   {
     title: "Community-Powered Safety Network",
     description:
-      "Contribute to a decentralized safety network with a low barrier to entry. With 28 million WhatsApp users in South Africa, you likely already have the tool to make a difference.",
+      "Contribute to a unified safety network. With 28 million WhatsApp users in South Africa, we have the ability to make a collective difference.",
     icon: "👥",
   },
   {
-    title: "Enhanced Security Operations",
+    title: "Empowered Armed Respondants",
     description:
-      "Empower security guards with targeted patrol routing. Our multi-lingual bots support English, Zulu, Xhosa, and Afrikaans, enabling efficient communication and data collection.",
+      "Empower security guards with targeted patrol routing and real-time notifications of suspicious activity. Wolf is multi-lingual and supports English, Spanish, Zulu, Xhosa, and Afrikaans, enabling seemless communication for everyone.",
     icon: "👮‍♂️",
   },
 ];
@@ -31,6 +31,7 @@ const serviceList: ServiceProps[] = [
 export const Services = () => {
   return (
     <section className="container py-24 sm:py-32">
+      
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
         <div>
           {/* <h2 className="text-3xl md:text-4xl font-bold">
@@ -40,7 +41,7 @@ export const Services = () => {
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
             dolor.
-          </p> */}
+          </p> */}      
 
           <div className="flex flex-col gap-8">
             {serviceList.map(({ icon, title, description }: ServiceProps) => (
