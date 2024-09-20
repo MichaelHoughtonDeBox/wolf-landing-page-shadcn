@@ -21,29 +21,38 @@ interface RouteProps {
 }
 
 const routeList: RouteProps[] = [
-  // {
-  //   href: "#about",
-  //   label: "About 🐺",
-  // },
+  {
+    href: "#about",
+    label: "About 🐺",
+  },
+  // Commented out routes
   // {
   //   href: "#features",
   //   label: "Features ✨",
   // },
-  // // {
-  // //   href: "#testimonials",
-  // //   label: "Testimonials 💬",
-  // // },
-  // // {
-  // //   href: "#pricing",
-  // //   label: "Pricing 💰",
-  // // },
   // {
-  //   href: "#faq",
-  //   label: "FAQ ❓",
+  //   href: "#testimonials",
+  //   label: "Testimonials 💬",
+  // },
+  // {
+  //   href: "#pricing",
+  //   label: "Pricing 💰",
   // },
   {
-    href: "https://map.communitywolf.com/", // Replace with actual URL
-    label: "Live Map 🗺️",
+    href: "#faq",
+    label: "FAQ ❓",
+  },
+  {
+    href: "/privacy-policy",
+    label: "Privacy Policy 🔒",
+  },
+  {
+    href: "/terms-of-service",
+    label: "Terms of Service 📜",
+  },
+  {
+    href: "https://map.communitywolf.com/", 
+    label: "Live Community Map 🗺️",
   },
 ];
 
@@ -84,21 +93,23 @@ export const Navbar = () => {
                     Wolf 🐺
                   </SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col items-center gap-2 mt-4">
-                  {/* Single map button */}
-                  <Button
-                    variant="default"
-                    asChild
-                    className="w-full"
-                  >
-                    <a
-                      rel="noreferrer noopener"
-                      href="https://map.communitywolf.com/"
-                      onClick={() => setIsOpen(false)}
+                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
+                  {routeList.map(({ href, label }: RouteProps) => (
+                    <Button
+                      key={label}
+                      variant={label === "Live Community Map 🗺️" ? "default" : "outline"}
+                      asChild
+                      className="w-full"
                     >
-                      Live Map 🗺️
-                    </a>
-                  </Button>
+                      <a
+                        rel="noreferrer noopener"
+                        href={href}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {label}
+                      </a>
+                    </Button>
+                  ))}
                 </nav>
               </SheetContent>
             </Sheet>
@@ -106,20 +117,21 @@ export const Navbar = () => {
 
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
-            {/* Single button for Live Map */}
-            <Button
-              variant="default"
-              asChild
-              className="text-[17px] shadow-xl"
-            >
-              <a
-                rel="noreferrer noopener"
-                href="https://map.communitywolf.com/"
-                className="text-[17px] shadow-xl"
+            {routeList.map((route: RouteProps, i) => (
+              <Button
+                key={i}
+                variant={route.label === "Live Community Map 🗺️" ? "default" : "outline"}
+                asChild
               >
-                Live Map 🗺️
-              </a>
-            </Button>
+                <a
+                  rel="noreferrer noopener"
+                  href={route.href}
+                  className="text-[17px] shadow-xl"
+                >
+                  {route.label}
+                </a>
+              </Button>
+            ))}
           </nav>
 
           <div className="hidden md:flex gap-2">
