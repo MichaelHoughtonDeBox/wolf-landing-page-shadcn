@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+
 export const Footer = () => {
   return (
     <footer id="footer">
       {/* Footer section with links and social media */}
       <section className="container py-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-x-12 gap-y-8 bg-white rounded-lg">
         <div className="col-span-full xl:col-span-2">
-          <a
-            rel="noreferrer noopener"
-            href="/"
+          <Link
+            to="/"
             className="font-bold text-xl flex"
           >
             Wolf 🐺
-          </a>
+          </Link>
         </div>
 
         <div className="flex flex-col gap-2">
@@ -25,7 +26,7 @@ export const Footer = () => {
             </a>
           </div>
 
-          <div>
+          {/* <div>
             <a
               rel="noreferrer noopener"
               href="#"
@@ -33,7 +34,7 @@ export const Footer = () => {
             >
               Twitter 🐦
             </a>
-          </div>
+          </div> */}
 
           <div>
             <a
@@ -48,7 +49,7 @@ export const Footer = () => {
 
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg">Platforms 📱</h3>
-          <div>
+          {/* <div>
             <a
               rel="noreferrer noopener"
               href="#"
@@ -56,7 +57,7 @@ export const Footer = () => {
             >
               Web 🌐
             </a>
-          </div>
+          </div> */}
 
           <div>
             <a
@@ -92,35 +93,32 @@ export const Footer = () => {
           </div> */}
 
           <div>
-            <a
-              rel="noreferrer noopener"
-              href="#faq"
+            <Link
+              to="/faq"
               className="opacity-60 hover:opacity-100"
             >
               FAQ ❓
-            </a>
+            </Link>
           </div>
 
-          {/* Updated Terms of Service link */}
+          {/* Link to Terms of Service page */}
           <div>
-            <a
-              rel="noreferrer noopener"
-              href="/terms-of-service"
+            <Link
+              to="/terms-of-service"
               className="opacity-60 hover:opacity-100"
             >
               Terms of Service 📜
-            </a>
+            </Link>
           </div>
 
-          {/* Updated Privacy Policy link */}
+          {/* Link to Privacy Policy page */}
           <div>
-            <a
-              rel="noreferrer noopener"
-              href="/privacy-policy"
+            <Link
+              to="/privacy-policy"
               className="opacity-60 hover:opacity-100"
             >
               Privacy Policy 🔒
-            </a>
+            </Link>
           </div>
         </div>
       </section>
