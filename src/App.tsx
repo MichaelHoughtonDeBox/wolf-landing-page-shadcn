@@ -30,7 +30,7 @@ function App() {
         <Routes> {/* Define Routes within Routes component */}
           <Route path="/" element={(
             <>
-            <Navbar />
+              <Navbar />
               <Hero />
               <About />
               <HowItWorks />
