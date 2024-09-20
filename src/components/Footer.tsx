@@ -100,37 +100,26 @@ export const Footer = () => {
               FAQ ❓
             </a>
           </div>
-        </div>
 
-        <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community 🤝</h3>
+          {/* Updated Terms of Service link */}
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="/terms-of-service"
               className="opacity-60 hover:opacity-100"
             >
-              Youtube 🎥
+              Terms of Service 📜
             </a>
           </div>
 
+          {/* Updated Privacy Policy link */}
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="/privacy-policy"
               className="opacity-60 hover:opacity-100"
             >
-              Discord 💬
-            </a>
-          </div>
-
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Twitch 🎮
+              Privacy Policy 🔒
             </a>
           </div>
         </div>

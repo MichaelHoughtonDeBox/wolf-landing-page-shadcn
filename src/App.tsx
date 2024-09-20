@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import Router components
 import { About } from "./components/About";
 import { Cta } from "./components/Cta";
 import { FAQ } from "./components/FAQ";
@@ -11,10 +12,10 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { Services } from "./components/Services";
 // import { Team } from "./components/Team";
 // import { Testimonials } from "./components/Testimonials";
+import { PrivacyPolicy } from "./components/PrivacyPolicy"; // Import PrivacyPolicy component
+import { TermsOfService } from "./components/TermsOfService"; // Import TermsOfService component
 import "./App.css";
 import { useEffect } from 'react';
-
-// TODOD
 
 function App() {
   useEffect(() => {
@@ -24,24 +25,32 @@ function App() {
   }, []);
 
   return (
-    <div className="mx-auto max-w-screen-lg">
-      <Navbar />
-      <Hero />
+    <Router> {/* Wrap the application with Router */}
       <div className="mx-auto max-w-screen-lg">
-        <About />
-        <HowItWorks />
-        {/* <Features /> */}
-        <Services />
-        <Cta />
-        {/* <Testimonials /> */}
-        {/* <Team /> */}
-        {/* <Pricing /> */}
-        {/* <Newsletter /> */}
-        <FAQ />
-        <Footer />
+        <Routes> {/* Define Routes within Routes component */}
+          <Route path="/" element={(
+            <>
+            <Navbar />
+              <Hero />
+              <About />
+              <HowItWorks />
+              {/* <Features /> */}
+              <Services />
+              <Cta />
+              {/* <Testimonials /> */}
+              {/* <Team /> */}
+              {/* <Pricing /> */}
+              {/* <Newsletter /> */}
+              <FAQ />
+            </>
+          )} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* Route for Privacy Policy */}
+          <Route path="/terms-of-service" element={<TermsOfService />} /> {/* Route for Terms of Service */}
+        </Routes>
+        <Footer /> {/* Footer is outside Routes to be displayed on all pages */}
         <ScrollToTop />
       </div>
-    </div>
+    </Router>
   );
 }
 
