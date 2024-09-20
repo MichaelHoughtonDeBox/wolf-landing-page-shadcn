@@ -42,14 +42,7 @@ const routeList: RouteProps[] = [
     href: "#faq",
     label: "FAQ ❓",
   },
-  {
-    href: "/privacy-policy",
-    label: "Privacy Policy 🔒",
-  },
-  {
-    href: "/terms-of-service",
-    label: "Terms of Service 📜",
-  },
+
   {
     href: "https://map.communitywolf.com/", 
     label: "Live Community Map 🗺️",
