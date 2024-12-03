@@ -1,5 +1,4 @@
 import { Button } from "./ui/button";
-import Iphone15Pro from "@/components/magicui/iphone-15-pro";
 import { Card, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card"
 import OrbitingCircles from "@/components/magicui/orbiting-circles"
 
@@ -123,7 +122,7 @@ export const Hero = () => {
               <Button 
               variant="default" 
               className="ml-4"
-              onClick={() => window.open('https://map.communitywolf.com/', '_blank')}
+              onClick={() => window.open('https://wa.me/+447488879934/?text=Hey%20Wolf%2C%20I%27m%20new%20around%20here.%20What%20do%20I%20need%20to%20do%20to%20get%20started%3F%20', '_blank')}
               >
                 See Live Map 🗺️
               </Button>
