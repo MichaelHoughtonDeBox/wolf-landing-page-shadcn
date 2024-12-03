@@ -1,5 +1,4 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import Iphone15Pro from "@/components/magicui/iphone-15-pro";
 
 interface ServiceProps {
   title: string;
