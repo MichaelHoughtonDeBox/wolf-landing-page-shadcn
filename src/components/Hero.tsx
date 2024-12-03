@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <>
       <div 
-        className="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat opacity-900"
+        className="fixed inset-0 z-[-1] bg-cover bg-center bg-no-repeat opacity-90"
         style={{
           backgroundImage: "url('https://res.cloudinary.com/dkbn21xdu/image/upload/v1725627216/Screenshot_2024-09-06_at_13.53.30_lh6hl5.png')"
         }}
@@ -115,21 +115,21 @@ export const Hero = () => {
               <Button 
               variant="outline" 
               className=""
-              onClick={() => window.location.href = '#faq'}
+              onClick={() => window.open('https://wa.me/+447488879934/?text=Hey%20Wolf%2C%20I%27m%20new%20around%20here.%20What%20do%20I%20need%20to%20do%20to%20get%20started%3F%20', '_blank')}
               >
                 Try Wolf in WhatsApp 🐺
               </Button>
               <Button 
               variant="default" 
               className="ml-4"
-              onClick={() => window.open('https://wa.me/+447488879934/?text=Hey%20Wolf%2C%20I%27m%20new%20around%20here.%20What%20do%20I%20need%20to%20do%20to%20get%20started%3F%20', '_blank')}
+              onClick={() => window.open('https://map.communitywolf.com/', '_blank')}
               >
                 See Live Map 🗺️
               </Button>
             </CardFooter>
           </Card>
           
-          <div className="z-10 lg:order-1w-full max-w-xl mx-auto hidden md:block rotate-12">
+          <div className="z-10 lg:order-1 w-full max-w-xl mx-auto hidden md:block rotate-12">
             <img 
               src="https://res.cloudinary.com/dkbn21xdu/image/upload/v1733240464/6_b8xr7u.svg"
               alt="Wolf Security Illustration" 
