@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Im
 import { About } from "./components/About";
 import { Cta } from "./components/Cta";
 import { FAQ } from "./components/FAQ";
-// import { Features } from "./components/Features";
+import { Features } from "./components/Features";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { HowItWorks } from "./components/HowItWorks";
@@ -16,6 +16,7 @@ import { PrivacyPolicy } from "./components/PrivacyPolicy"; // Import PrivacyPol
 import { TermsOfService } from "./components/TermsOfService"; // Import TermsOfService component
 import "./App.css";
 import { useEffect } from 'react';
+import { Team } from "./components/Team";
 
 function App() {
   useEffect(() => {
@@ -34,11 +35,11 @@ function App() {
               <Hero />
               <About />
               <HowItWorks />
-              {/* <Features /> */}
+              <Features />
               <Services />
+              <Team />
               <Cta />
               {/* <Testimonials /> */}
-              {/* <Team /> */}
               {/* <Pricing /> */}
               {/* <Newsletter /> */}
               <FAQ />
@@ -47,7 +48,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} /> {/* Route for Privacy Policy */}
           <Route path="/terms-of-service" element={<TermsOfService />} /> {/* Route for Terms of Service */}
         </Routes>
-        <Footer /> {/* Footer is outside Routes to be displayed on all pages */}
+        <Footer /> 
         <ScrollToTop />
       </div>
     </Router>

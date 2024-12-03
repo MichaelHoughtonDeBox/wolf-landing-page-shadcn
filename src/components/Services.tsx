@@ -9,22 +9,22 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "WhatsApp Is Your Friend",
+    title: "Create Custom Alert Areas",
     description:
-      "Send Wolf a WhatsApp message or voice note with any incident details you remember. Wolf stores and analyses your reports, creating a virtual police statement that it can reference in the future when trying to identify patterns.",
-    icon: "📱",
+      "Simply drop a pin in WhatsApp to create notification areas around your home, work, school or any location important to you. Wolf will keep you informed of any suspicious activity reported in these areas.",
+    icon: "📍",
   },
   {
-    title: "Community-Powered Safety Network",
+    title: "Review Past Reports",
     description:
-      "Contribute to a unified safety network. With 28 million WhatsApp users in South Africa, we have the ability to make a collective difference.",
-    icon: "👥",
+      "Check in with Wolf anytime to see what incidents have been reported in your monitored areas. Share your alert zones with family and friends so they stay informed about safety in areas that matter to them.",
+    icon: "🔔",
   },
   {
-    title: "Empowered Armed Respondants",
+    title: "Multi-lingual Reporting",
     description:
-      "Empower security guards with targeted patrol routing and real-time notifications of suspicious activity. Wolf is multi-lingual and supports English, Spanish, Zulu, Xhosa, and Afrikaans, enabling seemless communication for everyone.",
-    icon: "👮‍♂️",
+      "Report incidents in any language - Wolf supports English, Zulu, Xhosa, Shona, Tshivenda, Afrikaans and more. Our AI translates everything so control rooms and response teams get clear, actionable information.",
+    icon: "🌍",
   },
 ];
 
@@ -47,7 +47,7 @@ export const Services = () => {
             {serviceList.map(({ icon, title, description }: ServiceProps) => (
               <Card key={title}>
                 <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
-                  <div className=" text-6xl">
+                  <div className=" text-5xl">
                     {icon}
                   </div>
                   <div>
@@ -62,8 +62,12 @@ export const Services = () => {
           </div>
         </div>
 
-        <div className="z-10 lg:order-2 shadow-xl rounded-2xl w-full max-w-sm mx-auto hidden md:block rotate-[-6deg]">
-            <Iphone15Pro src="https://res.cloudinary.com/dkbn21xdu/image/upload/v1725651736/Screenshot_2024-09-06_at_20.42.11_geycws.png" />
+        <div className="z-10 lg:order-2 w-full max-w-xl mx-auto hidden md:block rotate-[-6deg]">
+            <img 
+              src="https://res.cloudinary.com/dkbn21xdu/image/upload/v1733240902/Wolf_UI_elemetns_p72sca.svg"
+              alt="Wolf Security Illustration" 
+              className="w-full h-auto transform scale-150"
+            />
           </div>
       </div>
     </section>

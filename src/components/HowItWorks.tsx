@@ -8,28 +8,22 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    icon: "🏅",
-    title: "Easy Accessibility 📱",
+    icon: "👥",
+    title: "For Communities 📱",
     description:
-      "With 28 million WhatsApp users in South Africa, Wolf leverages an app you already have. No need to download a new app or provide personal details - just send Wolf a message to contribute.",
+      "Wolf enables anonymous crime reporting and verified alerts through WhatsApp, used by 30 million South Africans daily—no downloads required.\n No more apps. No more downloads. No more personal details. No more credit cards.",
   },
   {
-    icon: "🗺️",
-    title: "Community-Driven Safety 🤝",
+    icon: "👮‍♂️", 
+    title: "Security Companies 🚨", 
     description:
-      "Empower your community by sharing what you saw and where you saw it. Your contributions helps to create a stronger safety network, benefiting everyone.",
+      "Wolf consolidates all security communication through a single AI-enabled channel, streamlining operations and enabling seamless coordination between control rooms and response teams.",
   },
   {
-    icon: "✈️",
-    title: "Virtual Witness Statements 🚔",
+    icon: "🏛️",
+    title: "For Government 📊",
     description:
-      "Submit detailed witness statements via a message or voice notes. Wolf stores and analyses this data, creating a valuable tool for public protectors.",
-  },
-  {
-    icon: "🎁",
-    title: "Precise Patrol Routes 🛡️",
-    description:
-      "Your local armed response teams will benefit from optimised patrol routing based on community reports, improving response times and overall safety.",
+      "Wolf empowers communities to participate in their own safety through accessible self-reporting, creating a collaborative approach between law enforcement and citizens while improving response times and resource allocation.",
   },
 ];
 
@@ -40,21 +34,21 @@ export const HowItWorks = () => {
       className="container text-center py-24 sm:py-32"
     >
       <Card className="shadow-xl p-8">
-        <h2 className="text-3xl md:text-3xl font-bold mb-4">
-          No logins required. No tracking. No ads. Just tell Wolf what's happening. 📢
+        <h2 className="text-3xl lg:text-4xl font-bold md:text-center mb-4">
+        Wolf gives communities a <span className="text-red-500">safe, free and accessible</span> way to report suspicious activity, increasing safety for everyone 🚨
         </h2>
         <p className="md:w-3/4 mx-auto mt-4 mb-8 text-lg text-muted-foreground">
-          Wolf simplifies incident reporting. Just send a message or voice note to contribute valuable information. Your reports help Wolf create a safer environment for everyone.
+          Simply send a WhatsApp message to Wolf to report incidents. No app downloads or personal details needed - if you have WhatsApp, you're ready to help make your community safer.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {features.map(({ title, description }: FeatureProps) => (
             <Card
               key={title}
-              className={`shadow-xl bg-white text-black`}
+              className={`shadow-xl bg-black text-white`}
             >
               <CardHeader>
-                <CardTitle className="grid gap-4 place-items-center text-left">
+                <CardTitle className="grid gap-4 place-items-left text-left">
                   {title}
                 </CardTitle>
               </CardHeader>

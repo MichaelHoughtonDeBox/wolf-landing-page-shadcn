@@ -13,6 +13,7 @@ interface TeamProps {
   imageUrl: string;
   name: string;
   position: string;
+  description: string; // Added description field
   socialNetworks: SociaNetworkslProps[];
 }
 
@@ -23,71 +24,26 @@ interface SociaNetworkslProps {
 
 const teamList: TeamProps[] = [
   {
-    imageUrl: "https://i.pravatar.cc/150?img=35",
-    name: "Emma Smith",
-    position: "Product Manager",
+    imageUrl: "https://res.cloudinary.com/dkbn21xdu/image/upload/v1733239612/1732636573960_dxcq4o.jpg",
+    name: "Nick Mills",
+    position: "Co-Founder",
+    description: "Nick is an entrepreneur with a strong foundation in data led decision-making and strategic execution. With experience at a systematic hedge fund and a founding member of Versofy Solar, Nick has a proven track record of raising capital, scaling operations and systemising processes to deliver products into the South African consumer market. Nick is well positioned to drive Wolf’s growth and integration into existing security infrastructure.", // Added description
     socialNetworks: [
       {
         name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
+        url: "https://www.linkedin.com/in/nick-mills-south-africa/",
       },
     ],
   },
   {
-    imageUrl: "https://i.pravatar.cc/150?img=60",
-    name: "John Doe",
-    position: "Tech Lead",
+    imageUrl: "https://res.cloudinary.com/dkbn21xdu/image/upload/v1733239628/uU9cCdW7d8G3M5JRpGup5_b6c9218896304912ad7c3f955502b71e-2_asn0rh.jpg",
+    name: "Michael Houghton",
+    position: "Co-Founder",
+    description: "An AI specialist with a proven track record in developing and deploying complex software solutions. He has held key roles in technology firms, where he led the creation of scalable platforms tailored to real-world challenges. Michael’s expertise in AI and software development is instrumental in building Wolf’s core platform and ensuring its technological robustness.", // Added description
     socialNetworks: [
       {
         name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=36",
-    name: "Ashley Ross",
-    position: "Frontend Developer",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/",
-      },
-    ],
-  },
-  {
-    imageUrl: "https://i.pravatar.cc/150?img=17",
-    name: "Bruce Rogers",
-    position: "Backend Developer",
-    socialNetworks: [
-      {
-        name: "Linkedin",
-        url: "https://www.linkedin.com/in/leopoldo-miranda/",
-      },
-      {
-        name: "Facebook",
-        url: "https://www.facebook.com/",
+        url: "https://www.linkedin.com/in/michaeljohnhoughton/",
       },
     ],
   },
@@ -110,65 +66,73 @@ export const Team = () => {
   return (
     <section
       id="team"
-      className="container py-24 sm:py-32"
+      className="container py-24 sm:py-32 space-y-8 z-20"
     >
-      <h2 className="text-3xl md:text-4xl font-bold">
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Our Dedicated{" "}
-        </span>
-        Crew
-      </h2>
+      <Card className="p-6 shadow-xl">
+        <CardHeader>
+          <CardTitle className="text-3xl lg:text-4xl font-bold md:text-center">
+            <span className="text-3xl lg:text-4xl font-bold md:text-center">
+              Meet the <span className="text-red-500">Wolf Team</span>
+            </span>
+          </CardTitle>
+          <CardContent>
+            <p className="mt-4 mb-10 text-xl text-muted-foreground text-center">
+              We are committed to making all of humanity feel safer and protected through innovative AI and WhatsApp integration, making communities safer for everyone.
+            </p>
+          </CardContent>
+        </CardHeader>
 
-      <p className="mt-4 mb-10 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
-      </p>
+        <CardContent>
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {teamList.map(
+              ({ imageUrl, name, position, description, socialNetworks }: TeamProps) => (
+                <Card
+                  key={name}
+                  className="relative h-full flex flex-col bg-black text-white"
+                >
+                  {/* Profile image and header section */}
+                  <CardHeader className="flex flex-col items-center pt-16 pb-4">
+                    <img
+                      src={imageUrl}
+                      alt={`${name} ${position}`}
+                      className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover grayscale"
+                    />
+                    <CardTitle className="text-center text-white">{name}</CardTitle>
+                    <CardDescription className="text-white">
+                      {position}
+                    </CardDescription>
+                  </CardHeader>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 gap-y-10">
-        {teamList.map(
-          ({ imageUrl, name, position, socialNetworks }: TeamProps) => (
-            <Card
-              key={name}
-              className="relative mt-8 flex flex-col justify-center items-center"
-            >
-              <CardHeader className="mt-8 flex justify-center items-center pb-2">
-                <img
-                  src={imageUrl}
-                  alt={`${name} ${position}`}
-                  className="absolute -top-12 rounded-full w-24 h-24 aspect-square object-cover"
-                />
-                <CardTitle className="text-center">{name}</CardTitle>
-                <CardDescription className="text-primary">
-                  {position}
-                </CardDescription>
-              </CardHeader>
+                  {/* Description section - using flex-grow to push footer down */}
+                  <CardContent className="flex-grow text-center px-6 text-white">
+                    <p>{description}</p>
+                  </CardContent>
 
-              <CardContent className="text-center pb-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </CardContent>
-
-              <CardFooter>
-                {socialNetworks.map(({ name, url }: SociaNetworkslProps) => (
-                  <div key={name}>
-                    <a
-                      rel="noreferrer noopener"
-                      href={url}
-                      target="_blank"
-                      className={buttonVariants({
-                        variant: "ghost",
-                        size: "sm",
-                      })}
-                    >
-                      <span className="sr-only">{name} icon</span>
-                      {socialIcon(name)}
-                    </a>
-                  </div>
-                ))}
-              </CardFooter>
-            </Card>
-          )
-        )}
-      </div>
+                  {/* Footer section - always at bottom */}
+                  <CardFooter className="justify-center pt-4 pb-6">
+                    {socialNetworks.map(({ name, url }: SociaNetworkslProps) => (
+                      <div key={name}>
+                        <a
+                          rel="noreferrer noopener"
+                          href={url}
+                          target="_blank"
+                          className={buttonVariants({
+                            variant: "ghost",
+                            size: "sm",
+                          })}
+                        >
+                          <span className="sr-only">{name} icon</span>
+                          {socialIcon(name)}
+                        </a>
+                      </div>
+                    ))}
+                  </CardFooter>
+                </Card>
+              )
+            )}
+          </div>
+        </CardContent>
+      </Card>
     </section>
   );
 };

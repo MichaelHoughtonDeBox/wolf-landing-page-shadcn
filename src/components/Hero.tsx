@@ -104,37 +104,38 @@ export const Hero = () => {
           <Card className="text-center space-y-6 p-6 w-full lg:text-start lg:order-1 lg:pr-12 shadow-xl px-0">
             <CardHeader>
               <CardTitle className="text-4xl md:text-5xl sm:text-4xl font-black mb-4">
-                A Service Asking You to Cry Wolf 🐺
+               Wolf turns WhatsApp into a <span className="text-red-500">powerful crime reporting tool</span> that makes communities safer.
               </CardTitle>
               <CardDescription>
                 <p className="text-md text-muted-foreground mt-4">
-                 Wolf is an advanced personal safety network that empowers  you to protect yourself, your loved ones, and your community. By leveraging real-time data and community reports, Wolf enhances your situational awareness, helping you make informed decisions about your safety.
-                </p>
-                <p className="text-md text-muted-foreground mt-4">
-                  Contribute to community safety effortlessly by submitting anonymous reports through WhatsApp or webapp's live map. Join the Wolf pack and be part of a proactive approach to crime prevention and personal security. 🐺
+                 Report crime anonymously on WhatsApp in any language for free. Wolf consolidates community safety data and uses AI to help create positive safety outcomes for all South African communities. We work with community leaders, ward councillors and security providers to make neighborhoods safer.
                 </p>
               </CardDescription>
             </CardHeader>
             <CardFooter>
               <Button 
-              variant="default" 
+              variant="outline" 
               className=""
+              onClick={() => window.location.href = '#faq'}
+              >
+                Try Wolf in WhatsApp 🐺
+              </Button>
+              <Button 
+              variant="default" 
+              className="ml-4"
               onClick={() => window.open('https://map.communitywolf.com/', '_blank')}
               >
                 See Live Map 🗺️
               </Button>
-              <Button 
-              variant="outline" 
-              className="ml-4"
-              onClick={() => window.location.href = '#faq'}
-              >
-                Learn More 📚
-              </Button>
             </CardFooter>
           </Card>
           
-          <div className="z-10 lg:order-2 shadow-xl rounded-2xl w-full max-w-sm mx-auto hidden md:block rotate-12">
-            <Iphone15Pro src="https://res.cloudinary.com/dkbn21xdu/image/upload/v1725627146/Screenshot_2024-09-06_at_13.52.14_ffen79.png" />
+          <div className="z-10 lg:order-1w-full max-w-xl mx-auto hidden md:block rotate-12">
+            <img 
+              src="https://res.cloudinary.com/dkbn21xdu/image/upload/v1733240464/6_b8xr7u.svg"
+              alt="Wolf Security Illustration" 
+              className="w-full h-auto transform scale-150"
+            />
           </div>
         </div>
       </section>

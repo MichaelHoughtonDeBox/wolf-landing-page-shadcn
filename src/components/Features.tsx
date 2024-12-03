@@ -39,16 +39,19 @@ const features: FeatureProps[] = [
 ];
 
 const featureList: string[] = [
-  "Real-time community insights 🔍",
-  "Anonymous witness reporting 🕵️",
+  "Real-time community insights 🔍", // Provides immediate visibility into local safety activity
+  "Anonymous witness reporting 🕵️", // Report incidents without revealing identity
   "Incident prevention and resolution 🛡️",
   "Situational awareness updates 🚨",
   "Smart routing of information 🧠",
   "Machine learning threat analysis 🤖",
-  "WhatsApp integration 📱",
-  "Voice note reporting 🎙️",
-  "Predictive crime prevention 🔮",
-  "Community-powered safety network 🤝",
+  "WhatsApp integration 📱", // Leverages existing WhatsApp platform used by 30M South Africans
+  "Voice note reporting 🎙️", // Support for voice messages in multiple languages
+  "Predictive crime prevention 🔮", // Uses ML to identify patterns and prevent incidents
+  "Custom alert areas 🎯", // Set custom notification zones around important locations
+  "License plate recognition 🚗", // Automated vehicle identification
+  "Facial recognition 👤", // Advanced person identification capabilities  
+  "Community-powered surveillance network 📡", // Distributed monitoring through community participation
 ];
 
 export const Features = () => {
@@ -145,7 +148,7 @@ export const Features = () => {
       <Card className="p-6 shadow-xl">
         <CardHeader>
           <CardTitle className="text-3xl lg:text-4xl font-bold md:text-center">
-            Features to keep you safe 🐺
+            We have put the <span className="text-red-500">power of camera surveillance</span> in the hands of 30 million South Africans 🐺
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -153,8 +156,8 @@ export const Features = () => {
             {featureList.map((feature: string) => (
               <div key={feature}>
                 <Badge
-                  variant="default"
-                  className="text-sm bg-black text-white rounded-xl"
+                  variant="outline" 
+                  className="text-md text-black border-black border-2 rounded-md"
                 >
                   {feature}
                 </Badge>
@@ -163,26 +166,6 @@ export const Features = () => {
           </div>
         </CardContent>
       </Card>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title} className="shadow-xl">
-            <CardHeader>
-              <CardTitle>{title}</CardTitle>
-            </CardHeader>
-
-            <CardContent>{description}</CardContent>
-
-            <CardFooter>
-              <img
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
     </section>
   );
 };

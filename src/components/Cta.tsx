@@ -92,16 +92,25 @@ export const Cta = () => {
       <div className="relative z-10">
         <Card className="container">
           <CardContent className="p-6 lg:grid lg:grid-cols-2 place-items-center gap-8">
-            <div className="lg:col-start-1">
-              <CardHeader>
-                <CardTitle className="text-3xl md:text-3xl font-bold">
-                  Found Wolf too late? Don't worry, Wolf is able to process historical reports. 
-                </CardTitle>
-              </CardHeader>
-              <CardDescription className="text-muted-foreground text-md mt-4 mb-8 lg:mb-0">
-                The more report data that Wolf has access to the stronger its predictive capabilities are. By contributing and sharing any historical incidents, you're helping to build a safer community for everyone.
-              </CardDescription>
-            </div>
+                <div className="lg:col-start-1">
+                  <CardHeader>
+                    <CardTitle className="text-3xl lg:text-5xl font-bold md:text-left mb-4">
+                      Join Community Wolf today and <span className="text-red-500">make your community safer!</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardDescription className="text-muted-foreground text-md mt-4 mb-8">
+                    Try Wolf now and be part of a safer future. Start reporting incidents via WhatsApp and empower your community.
+                  </CardDescription>
+                  {/* Button moved under description */}
+                  <div className="space-y-4">
+                    <Button 
+                      className="w-full md:mr-4 md:w-auto"
+                      onClick={() => window.open('https://wa.me/+447488879934/?text=Hey%20Wolf%2C%20I%27m%20new%20around%20here.%20What%20do%20I%20need%20to%20do%20to%20get%20started%3F%20', '_blank')}
+                    >
+                      Talk to Wolf today 💬
+                    </Button>
+                  </div>
+                </div>
             {/* Image added above the buttons */}
             <div className="lg:col-start-2">
               <img
@@ -109,22 +118,6 @@ export const Cta = () => {
                 alt="Wolf Safety Map"
                 className="w-full rounded-lg shadow-lg"
               />
-            </div>
-
-            <div className="space-y-4 lg:col-start-2">
-              <Button 
-                className="w-full md:mr-4 md:w-auto"
-                onClick={() => window.open('https://map.communitywolf.com/', '_blank')}
-              >
-                View Live Map 🗺️
-              </Button>
-              <Button
-                variant="outline"
-                className="w-full md:w-auto"
-                onClick={() => window.location.href = '#faq'}
-              >
-                Learn More ❓
-              </Button>
             </div>
           </CardContent>
         </Card>
